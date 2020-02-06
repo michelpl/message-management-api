@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="17459ff7-10df-4630-8677-1e95370dd86f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/API/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/API/UserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_02_05_015936_create_messages_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_02_05_015936_create_messages_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -203,7 +205,12 @@
       <list>
         <serviceView>
           <treeState>
-            <expand />
+            <expand>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="root:desafio@localhost" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+            </expand>
             <select />
           </treeState>
         </serviceView>
@@ -224,7 +231,7 @@
       <workItem from="1580783908757" duration="311000" />
       <workItem from="1580867581660" duration="12132000" />
       <workItem from="1580951383878" duration="2246000" />
-      <workItem from="1580955965527" duration="6218000" />
+      <workItem from="1580955965527" duration="8176000" />
     </task>
     <servers />
   </component>
@@ -236,46 +243,46 @@
       <screen x="0" y="27" width="1920" height="1008" />
     </state>
     <state x="555" y="191" width="800" height="677" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.27.1920.1008@0.27.1920.1008" timestamp="1580443402772" />
-    <state x="693" y="288" width="524" height="484" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1580875912826">
+    <state x="693" y="288" width="524" height="484" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1580964059860">
       <screen x="0" y="27" width="1920" height="1008" />
     </state>
-    <state x="693" y="288" width="524" height="484" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.27.1920.1008@0.27.1920.1008" timestamp="1580875912826" />
+    <state x="693" y="288" width="524" height="484" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.27.1920.1008@0.27.1920.1008" timestamp="1580964059860" />
     <state x="743" y="288" width="424" height="484" key="FileChooserDialogImpl" timestamp="1580955343454">
       <screen x="0" y="27" width="1920" height="1008" />
     </state>
     <state x="743" y="288" width="424" height="484" key="FileChooserDialogImpl/0.27.1920.1008@0.27.1920.1008" timestamp="1580955343454" />
-    <state width="593" height="857" key="GridCell.Tab.0.bottom" timestamp="1580962017520">
+    <state width="593" height="857" key="GridCell.Tab.0.bottom" timestamp="1580964260709">
       <screen x="0" y="27" width="1920" height="1008" />
     </state>
-    <state width="593" height="857" key="GridCell.Tab.0.bottom/0.27.1920.1008@0.27.1920.1008" timestamp="1580962017520" />
-    <state width="593" height="857" key="GridCell.Tab.0.center" timestamp="1580962017519">
+    <state width="593" height="857" key="GridCell.Tab.0.bottom/0.27.1920.1008@0.27.1920.1008" timestamp="1580964260709" />
+    <state width="593" height="857" key="GridCell.Tab.0.center" timestamp="1580964260708">
       <screen x="0" y="27" width="1920" height="1008" />
     </state>
-    <state width="593" height="857" key="GridCell.Tab.0.center/0.27.1920.1008@0.27.1920.1008" timestamp="1580962017519" />
-    <state width="593" height="857" key="GridCell.Tab.0.left" timestamp="1580962017519">
+    <state width="593" height="857" key="GridCell.Tab.0.center/0.27.1920.1008@0.27.1920.1008" timestamp="1580964260708" />
+    <state width="593" height="857" key="GridCell.Tab.0.left" timestamp="1580964260708">
       <screen x="0" y="27" width="1920" height="1008" />
     </state>
-    <state width="593" height="857" key="GridCell.Tab.0.left/0.27.1920.1008@0.27.1920.1008" timestamp="1580962017519" />
-    <state width="593" height="857" key="GridCell.Tab.0.right" timestamp="1580962017519">
+    <state width="593" height="857" key="GridCell.Tab.0.left/0.27.1920.1008@0.27.1920.1008" timestamp="1580964260708" />
+    <state width="593" height="857" key="GridCell.Tab.0.right" timestamp="1580964260709">
       <screen x="0" y="27" width="1920" height="1008" />
     </state>
-    <state width="593" height="857" key="GridCell.Tab.0.right/0.27.1920.1008@0.27.1920.1008" timestamp="1580962017519" />
-    <state width="593" height="857" key="GridCell.Tab.1.bottom" timestamp="1580962017520">
+    <state width="593" height="857" key="GridCell.Tab.0.right/0.27.1920.1008@0.27.1920.1008" timestamp="1580964260709" />
+    <state width="593" height="857" key="GridCell.Tab.1.bottom" timestamp="1580964260710">
       <screen x="0" y="27" width="1920" height="1008" />
     </state>
-    <state width="593" height="857" key="GridCell.Tab.1.bottom/0.27.1920.1008@0.27.1920.1008" timestamp="1580962017520" />
-    <state width="593" height="857" key="GridCell.Tab.1.center" timestamp="1580962017520">
+    <state width="593" height="857" key="GridCell.Tab.1.bottom/0.27.1920.1008@0.27.1920.1008" timestamp="1580964260710" />
+    <state width="593" height="857" key="GridCell.Tab.1.center" timestamp="1580964260710">
       <screen x="0" y="27" width="1920" height="1008" />
     </state>
-    <state width="593" height="857" key="GridCell.Tab.1.center/0.27.1920.1008@0.27.1920.1008" timestamp="1580962017520" />
-    <state width="593" height="857" key="GridCell.Tab.1.left" timestamp="1580962017520">
+    <state width="593" height="857" key="GridCell.Tab.1.center/0.27.1920.1008@0.27.1920.1008" timestamp="1580964260710" />
+    <state width="593" height="857" key="GridCell.Tab.1.left" timestamp="1580964260709">
       <screen x="0" y="27" width="1920" height="1008" />
     </state>
-    <state width="593" height="857" key="GridCell.Tab.1.left/0.27.1920.1008@0.27.1920.1008" timestamp="1580962017520" />
-    <state width="593" height="857" key="GridCell.Tab.1.right" timestamp="1580962017520">
+    <state width="593" height="857" key="GridCell.Tab.1.left/0.27.1920.1008@0.27.1920.1008" timestamp="1580964260709" />
+    <state width="593" height="857" key="GridCell.Tab.1.right" timestamp="1580964260710">
       <screen x="0" y="27" width="1920" height="1008" />
     </state>
-    <state width="593" height="857" key="GridCell.Tab.1.right/0.27.1920.1008@0.27.1920.1008" timestamp="1580962017520" />
+    <state width="593" height="857" key="GridCell.Tab.1.right/0.27.1920.1008@0.27.1920.1008" timestamp="1580964260710" />
     <state x="755" y="455" width="399" height="149" key="NewPhpFileDialog" timestamp="1580868197146">
       <screen x="0" y="27" width="1920" height="1008" />
     </state>
@@ -284,10 +291,10 @@
       <screen x="0" y="27" width="1920" height="1008" />
     </state>
     <state width="960" height="505" key="XDebugger.FullValuePopup/0.27.1920.1008@0.27.1920.1008" timestamp="1580877555972" />
-    <state x="672" y="170" width="566" height="720" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1580957393845">
+    <state x="568" y="170" width="670" height="720" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1580963359467">
       <screen x="0" y="27" width="1920" height="1008" />
     </state>
-    <state x="672" y="170" width="566" height="720" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.27.1920.1008@0.27.1920.1008" timestamp="1580957393845" />
+    <state x="568" y="170" width="670" height="720" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.27.1920.1008@0.27.1920.1008" timestamp="1580963359467" />
     <state x="605" y="261" width="709" height="538" key="find.popup" timestamp="1580952048975">
       <screen x="0" y="27" width="1920" height="1008" />
     </state>
@@ -301,11 +308,6 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/app/Http/Controllers/API/UserController.php</url>
-          <line>57</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/app/Http/Middleware/Cors_.php</url>
           <line>10</line>
           <option name="timeStamp" value="7" />
@@ -317,12 +319,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/app/Http/Controllers/API/UserController.php</url>
-          <line>18</line>
-          <option name="timeStamp" value="17" />
+          <line>60</line>
+          <option name="timeStamp" value="34" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php-line-method">
           <url>file://$PROJECT_DIR$/app/Http/Controllers/API/UserController.php</url>
-          <line>55</line>
+          <line>57</line>
           <properties>
             <option name="className" value="\App\Http\Controllers\API\UserController" />
             <option name="methodName" value="details" />

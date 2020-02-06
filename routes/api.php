@@ -21,9 +21,7 @@ Route::prefix('/V1')->middleware('cors')->group(function () {
         Route::resource('message', 'API\MessageController');
         Route::get('message/user/{id}', 'API\MessageController@listByUserId');
 
-        Route::get('user/{id}', function (Request $request){
-            return $request->user();
-        });
+        Route::get('user/{id}', 'API\UserController@show');;
     });
 
     Route::post('register', 'API\UserController@register');

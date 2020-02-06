@@ -21,7 +21,8 @@ class CreateMessagesTable extends Migration
             $table->date('start_date');
             $table->date('expiration_date');
             $table->timestamps();
-            $table->bigInteger('user_id');
+            $table->unsignedBigInteger('user_id');
+            $table->foreign('user_id')->references('id')->on('users');
         });
     }
 

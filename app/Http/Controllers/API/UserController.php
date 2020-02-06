@@ -10,6 +10,12 @@ use Validator;
 class UserController extends Controller
 {
     public $successStatus = 200;
+    protected $user;
+
+    public function __construct(User $user) {
+        $this->user = $user;
+    }
+
     /**
      * login api
      *
@@ -48,14 +54,20 @@ class UserController extends Controller
         $success['name'] =  $user->name;
         return response()->json(['success'=>$success], $this-> successStatus);
     }
-    /**
-     * details api
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function details()
+
+    public function show($id)
     {
-        $user = Auth::user();
-        return response()->json(['success' => $user], $this-> successStatus);
+        try {
+            $this->user = $this->user->find($id);
+
+            if (!$this->user) {
+                return response('User id not found: ' . $id, 404);
+            }
+
+            return $this->user;
+
+        } catch (\Exception $exception) {
+            return response($exception->getMessage(), 500);
+        }
     }
 }
