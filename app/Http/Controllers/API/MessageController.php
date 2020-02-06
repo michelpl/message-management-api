@@ -21,12 +21,12 @@ class MessageController extends Controller
 
     public function index()
     {
-        return $this->message->all();
+        return $this->message->paginate(10);
     }
 
     public function listByUserId($id)
     {
-        return $this->message->all()->where('user_id', "=", $id);
+        return $this->message->where('user_id', "=", $id)->paginate(10);
     }
 
     public function show($id)
