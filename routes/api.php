@@ -12,7 +12,7 @@ use Illuminate\Http\Request;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
-Route::prefix('/V1')->middleware('cors')->group(function () {
+Route::group(['prefix' => 'V1',  'middleware' => 'cors'], function () {
     Route::get('/', function(){
         return;
     });
@@ -27,4 +27,3 @@ Route::prefix('/V1')->middleware('cors')->group(function () {
     Route::post('register', 'API\UserController@register');
     Route::post('login', 'API\UserController@login');
 });
-
