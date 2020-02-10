@@ -19,7 +19,7 @@ Route::group(['prefix' => 'V1',  'middleware' => 'cors'], function () {
 
     Route::group(['middleware' => 'auth:api'], function() {
         Route::resource('message', 'API\MessageController');
-        Route::get('message/user/{id}', 'API\MessageController@listByUserId');
+        Route::get('message/user/{id}', 'API\MessageController@listNotDeletedByUserId');
         Route::get('message/user/{id}/deleted', 'API\MessageController@listDeletedByUserId');
 
         Route::get('user/{id}', 'API\UserController@show');

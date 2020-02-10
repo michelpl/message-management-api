@@ -34,6 +34,11 @@ class MessageController extends Controller
         return $this->message->where(['user_id' => $id, 'status' => 'DELETED'])->paginate(10);
     }
 
+    public function listNotDeletedByUserId($id)
+    {
+        return $this->message->where('user_id', '=',  $id)->where('status', '!=', 'DELETED')->paginate(10);
+    }
+
     public function show($id)
     {
         try {
