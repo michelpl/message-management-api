@@ -34,7 +34,7 @@ class UserController extends Controller
     /**
      * Register api
      *
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\JsonResponse
      */
     public function register(Request $request)
     {
@@ -47,12 +47,26 @@ class UserController extends Controller
         if ($validator->fails()) {
             return response()->json(['error'=>$validator->errors()], 401);
         }
-        $input = $request->all();
-        $input['password'] = bcrypt($input['password']);
-        $user = User::create($input);
-        $success['token'] =  $user->createToken('MyApp')-> accessToken;
-        $success['name'] =  $user->name;
-        return response()->json(['success'=>$success], $this-> successStatus);
+
+        try {
+            $input = $request->all();
+            $input['password'] = bcrypt($input['password']);
+
+            $alreadyRegistered = $this->findByEmail($input['email']);
+
+            if (!empty($alreadyRegistered->id)) {
+                return response()->json(
+                    "E-mail: " . $input['email'] . ' already in use',
+                401
+                );
+            }
+            $user = User::create($input);
+            $success['token'] =  $user->createToken('MyApp')-> accessToken;
+            $success['name'] =  $user->name;
+            return response()->json(['success'=>$success], $this-> successStatus);
+        } catch (\Exception $exception) {
+            return response()->json("Can't create user", 401);
+        }
     }
 
     public function show($id)
@@ -67,7 +81,16 @@ class UserController extends Controller
             return $this->user;
 
         } catch (\Exception $exception) {
-            return response($exception->getMessage(), 500);
+            return response($exception->getMessage(), 400);
+        }
+    }
+
+    public function findByEmail($email) {
+        try {
+            return $this->user->where(['email' => $email])->firstOrFail();
+
+        } catch (\Exception $exception) {
+            return response($exception->getMessage(), 400);
         }
     }
 }
