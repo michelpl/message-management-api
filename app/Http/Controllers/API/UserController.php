@@ -67,7 +67,7 @@ class UserController extends Controller
             $success['name'] =  $user->name;
             return response()->json(['success'=>$success], $this-> successStatus);
         } catch (\Exception $exception) {
-            return response()->json("Can't create user", 401);
+            return response()->json("Can't create user" . $exception->getMessage(), 401);
         }
     }
 
